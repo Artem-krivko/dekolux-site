@@ -6,15 +6,24 @@ export const POST: APIRoute = async ({ request }) => {
 
     if (!name || !phone) {
       return new Response(
-        JSON.stringify({ success: false, error: "Missing required fields" }),
+        JSON.stringify({ success: false, error: "Не заполнены обязательные поля" }),
         { status: 400 }
+      );
+    }
+
+    const resendApiKey = process.env.RESEND_API_KEY;
+
+    if (!resendApiKey) {
+      return new Response(
+        JSON.stringify({ success: false, error: "RESEND_API_KEY is missing" }),
+        { status: 500 }
       );
     }
 
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${import.meta.env.RESEND_API_KEY}`,
+        Authorization: `Bearer ${resendApiKey}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -31,10 +40,11 @@ export const POST: APIRoute = async ({ request }) => {
       }),
     });
 
+    const resendData = await resendResponse.text();
+
     if (!resendResponse.ok) {
-      const errorText = await resendResponse.text();
       return new Response(
-        JSON.stringify({ success: false, error: errorText }),
+        JSON.stringify({ success: false, error: resendData }),
         { status: 500 }
       );
     }
