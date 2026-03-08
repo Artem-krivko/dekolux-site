@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dekolux.vercel.app/sitemap-index.xml
