@@ -238,6 +238,7 @@ const description =
             phone: String(formData.get("phone") || "").trim(),
             service: String(formData.get("service") || "").trim(),
             message: String(formData.get("message") || "").trim(),
+            company: String(formData.get("company") || "").trim(),
           };
 
           if (!payload.name || !payload.phone) {
