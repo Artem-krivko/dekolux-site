@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Dekolux",
+  description = "Прокол под дорогой, ГНБ, аренда мини-экскаватора, наружная канализация и монтаж септиков в Могилёве и области.",
+} = Astro.props;
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body class="bg-white text-[var(--text-main)]">
+    <slot />
+  </body>
+</html>

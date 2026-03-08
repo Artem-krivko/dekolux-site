@@ -1,0 +1,1200 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "Dekolux — прокол под дорогой и земляные работы в Могилёве";
+const description =
+  "Прокол под дорогой, ГНБ, аренда мини-экскаватора, наружная канализация и монтаж септиков в Могилёве и области.";
+---
+
+<MainLayout title={title} description={description}>
+  <Header />
+
+  <main>
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0f1b30] via-[#12223c] to-[#0c1628]">
+      <div class="pointer-events-none absolute inset-0">
+        <div class="hero-glow absolute -bottom-10 -right-10 h-56 w-56 rounded-full bg-orange-500/15 blur-3xl"></div>
+        <div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
+        <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-cyan-400/5 blur-3xl"></div>
+      </div>
+
+      <div class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 py-24 md:grid-cols-2 md:gap-16 md:py-28">
+        <div class="hero-fade-up">
+          <span class="inline-flex rounded-full border border-orange-500/25 bg-white/5 px-4 py-1.5 text-sm text-orange-300 backdrop-blur">
+            Могилёв и Могилёвская область
+          </span>
+
+          <h1 class="mt-6 max-w-2xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
+            Прокол методом ГНБ
+            и земляные работы
+            в Могилёве и области
+          </h1>
+
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+            Выполняем монтаж септиков, наружную канализацию и услуги мини-экскаватора
+            на собственной технике. Работаем аккуратно, с выездом на объект и по договору.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/contacts"
+              class="rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+              style="background-color: var(--color-accent);"
+            >
+              Получить расчёт
+            </a>
+
+            <a
+              href="/gnb-prokol"
+              class="rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition duration-300 hover:border-white/30 hover:bg-white/10"
+            >
+              Подробнее об услуге
+            </a>
+          </div>
+
+          <div class="mt-12 grid max-w-md grid-cols-2 gap-5">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+              <div class="text-2xl font-bold text-white">5+ лет</div>
+              <div class="mt-1 text-sm text-slate-400">опыта работ</div>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+              <div class="text-2xl font-bold text-white">от 100 руб</div>
+              <div class="mt-1 text-sm text-slate-400">за метр прокола</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-fade-up relative">
+          <div class="hero-card relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur">
+            <img
+              src="/images/hero/hero.webp"
+              alt="Мини-экскаватор и инженерные коммуникации"
+              loading="eager"
+              class="hero-image h-[420px] w-full object-cover md:h-[520px]"
+            />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a]/55 via-transparent to-transparent"></div>
+          </div>
+
+          <div class="absolute -left-6 bottom-12 rounded-xl border border-white/10 bg-[#14213b]/80 px-4 py-2.5 text-sm shadow-xl backdrop-blur">
+            <div class="font-semibold text-white">Своя техника</div>
+            <div class="text-xs text-slate-300">для инженерных работ</div>
+          </div>
+
+          <div class="absolute right-4 top-4 rounded-2xl border border-orange-400/20 bg-[#1a2743]/85 px-4 py-3 shadow-xl backdrop-blur md:right-6 md:top-6">
+            <div class="text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-300">
+              Dekolux
+            </div>
+            <div class="mt-1 text-sm text-white">Прокол, септики, экскаватор</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Наши услуги
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Основные услуги Dekolux
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Выполняем ключевые инженерные и земляные работы в Могилёве и области для
+            частных и строительных объектов.
+          </p>
+        </div>
+
+        <div class="mt-12 -mr-6 overflow-x-auto pb-2 md:hidden">
+          <div class="flex gap-4 pr-6 [scroll-snap-type:x_mandatory]">
+            <a
+              href="/gnb-prokol"
+              class="group relative min-w-[88%] snap-start overflow-hidden rounded-[2rem] border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700 p-8 text-[var(--text-light)] shadow-xl transition duration-300 hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-2xl"
+            >
+              <div
+                class="pointer-events-none absolute inset-0 opacity-80"
+                style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 45%);"
+              ></div>
+
+              <div class="relative">
+                <div
+                  class="inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
+                  style="
+                    border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+                    color: var(--color-accent);
+                  "
+                >
+                  01
+                </div>
+
+                <h3 class="mt-6 text-2xl font-bold">Прокол под дорогой / ГНБ</h3>
+
+                <p class="mt-4 text-sm leading-7 text-slate-300">
+                  Прокладка коммуникаций без вскрытия дорожного покрытия.
+                </p>
+
+                <div
+                  class="mt-8 flex items-center gap-3 text-sm font-semibold"
+                  style="color: var(--color-accent);"
+                >
+                  <span>Подробнее</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/arenda-mini-ekskavatora"
+              class="group relative min-w-[88%] snap-start overflow-hidden rounded-[2rem] border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700 p-8 text-[var(--text-light)] shadow-xl transition duration-300 hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-2xl"
+            >
+              <div
+                class="pointer-events-none absolute inset-0 opacity-80"
+                style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 45%);"
+              ></div>
+
+              <div class="relative">
+                <div
+                  class="inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
+                  style="
+                    border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+                    color: var(--color-accent);
+                  "
+                >
+                  02
+                </div>
+
+                <h3 class="mt-6 text-2xl font-bold">Аренда мини-экскаватора</h3>
+
+                <p class="mt-4 text-sm leading-7 text-slate-300">
+                  Траншеи, котлованы, подготовка участка и земляные работы в ограниченном пространстве.
+                </p>
+
+                <div
+                  class="mt-8 flex items-center gap-3 text-sm font-semibold"
+                  style="color: var(--color-accent);"
+                >
+                  <span>Подробнее</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/kanalizaciya-septiki"
+              class="group relative min-w-[88%] snap-start overflow-hidden rounded-[2rem] border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700 p-8 text-[var(--text-light)] shadow-xl transition duration-300 hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-2xl"
+            >
+              <div
+                class="pointer-events-none absolute inset-0 opacity-80"
+                style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 45%);"
+              ></div>
+
+              <div class="relative">
+                <div
+                  class="inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
+                  style="
+                    border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+                    color: var(--color-accent);
+                  "
+                >
+                  03
+                </div>
+
+                <h3 class="mt-6 text-2xl font-bold">
+                  Устройство наружной канализации и монтаж септиков
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-slate-300">
+                  Подготовка участка, укладка труб и монтаж септиков для частных и строительных объектов.
+                </p>
+
+                <div
+                  class="mt-8 flex items-center gap-3 text-sm font-semibold"
+                  style="color: var(--color-accent);"
+                >
+                  <span>Подробнее</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <p class="mt-4 pr-6 text-sm text-[var(--text-muted)]">
+            Листайте карточки влево, чтобы посмотреть все услуги.
+          </p>
+        </div>
+
+        <div class="mt-12 hidden gap-6 md:grid md:grid-cols-3">
+          <a
+            href="/gnb-prokol"
+            class="group relative overflow-hidden rounded-[2rem] border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700 p-8 text-[var(--text-light)] shadow-xl transition duration-300 hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-2xl"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 opacity-80"
+              style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 45%);"
+            ></div>
+
+            <div class="relative">
+              <div
+                class="inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
+                style="
+                  border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+                  color: var(--color-accent);
+                "
+              >
+                01
+              </div>
+
+              <h3 class="mt-6 text-2xl font-bold transition group-hover:opacity-90">
+                Прокол под дорогой / ГНБ
+              </h3>
+
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Прокладка коммуникаций без вскрытия дорожного покрытия.
+              </p>
+
+              <div
+                class="mt-8 flex items-center gap-3 text-sm font-semibold"
+                style="color: var(--color-accent);"
+              >
+                <span>Подробнее</span>
+                <span class="transition duration-300 group-hover:translate-x-1">→</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="/arenda-mini-ekskavatora"
+            class="group relative overflow-hidden rounded-[2rem] border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700 p-8 text-[var(--text-light)] shadow-xl transition duration-300 hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-2xl"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 opacity-80"
+              style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 45%);"
+            ></div>
+
+            <div class="relative">
+              <div
+                class="inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
+                style="
+                  border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+                  color: var(--color-accent);
+                "
+              >
+                02
+              </div>
+
+              <h3 class="mt-6 text-2xl font-bold transition group-hover:opacity-90">
+                Аренда мини-экскаватора
+              </h3>
+
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Траншеи, котлованы, подготовка участка и земляные работы в ограниченном пространстве.
+              </p>
+
+              <div
+                class="mt-8 flex items-center gap-3 text-sm font-semibold"
+                style="color: var(--color-accent);"
+              >
+                <span>Подробнее</span>
+                <span class="transition duration-300 group-hover:translate-x-1">→</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="/kanalizaciya-septiki"
+            class="group relative overflow-hidden rounded-[2rem] border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700 p-8 text-[var(--text-light)] shadow-xl transition duration-300 hover:-translate-y-1 hover:border-orange-400/40 hover:shadow-2xl"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 opacity-80"
+              style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 45%);"
+            ></div>
+
+            <div class="relative">
+              <div
+                class="inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
+                style="
+                  border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+                  color: var(--color-accent);
+                "
+              >
+                03
+              </div>
+
+              <h3 class="mt-6 text-2xl font-bold transition group-hover:opacity-90">
+                Устройство наружной канализации и монтаж септиков
+              </h3>
+
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Подготовка участка, укладка труб и монтаж септиков для частных и строительных объектов.
+              </p>
+
+              <div
+                class="mt-8 flex items-center gap-3 text-sm font-semibold"
+                style="color: var(--color-accent);"
+              >
+                <span>Подробнее</span>
+                <span class="transition duration-300 group-hover:translate-x-1">→</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Почему выбирают нас
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Почему клиенты обращаются в Dekolux
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Работаем на собственной технике, выезжаем по области и подходим к каждой
+            задаче аккуратно, понятно и по договору.
+          </p>
+        </div>
+
+        <div class="mt-12 hidden gap-6 sm:grid sm:grid-cols-2 xl:grid-cols-3">
+          <div class="group rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              01
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-[var(--text-main)]">5+ лет опыта</h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+              Работаем с частными и строительными объектами и подбираем решение под
+              конкретную задачу.
+            </p>
+          </div>
+
+          <div class="group rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              02
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-[var(--text-main)]">Собственная техника</h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+              Используем свой мини-экскаватор и оборудование для ГНБ без посредников.
+            </p>
+          </div>
+
+          <div class="group rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              03
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-[var(--text-main)]">Работа по договору</h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+              Прозрачные условия, понятный формат сотрудничества и аккуратный подход к
+              каждому этапу работ.
+            </p>
+          </div>
+
+          <div class="group rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              04
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-[var(--text-main)]">Выезд по области</h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+              Работаем по Могилёву и Могилёвской области, выезжаем на частные и
+              строительные объекты.
+            </p>
+          </div>
+
+          <div class="group rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              05
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-[var(--text-main)]">Аккуратные работы</h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+              Минимизируем лишние раскопки и внимательно работаем на участках клиентов.
+            </p>
+          </div>
+
+          <div class="group rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              06
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-[var(--text-main)]">Современная установка ГНБ</h3>
+            <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">
+              Используем установку горизонтального бурения с локатором для точной и
+              контролируемой работы.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 space-y-4 sm:hidden">
+          <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div
+              class="inline-flex h-11 w-11 items-center justify-center rounded-2xl text-base font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              01
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-[var(--text-main)]">5+ лет опыта</h3>
+            <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+              Работаем с частными и строительными объектами и подбираем решение под
+              конкретную задачу.
+            </p>
+          </div>
+
+          <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div
+              class="inline-flex h-11 w-11 items-center justify-center rounded-2xl text-base font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              02
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-[var(--text-main)]">Собственная техника</h3>
+            <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+              Используем свой мини-экскаватор и оборудование для ГНБ без посредников.
+            </p>
+          </div>
+
+          <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div
+              class="inline-flex h-11 w-11 items-center justify-center rounded-2xl text-base font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              03
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-[var(--text-main)]">Работа по договору</h3>
+            <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+              Прозрачные условия, понятный формат сотрудничества и аккуратный подход к
+              каждому этапу работ.
+            </p>
+          </div>
+
+          <div id="more-benefits" class="hidden space-y-4">
+            <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl text-base font-bold text-white"
+                style="background-color: var(--color-accent);"
+              >
+                04
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-[var(--text-main)]">Выезд по области</h3>
+              <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+                Работаем по Могилёву и Могилёвской области, выезжаем на частные и
+                строительные объекты.
+              </p>
+            </div>
+
+            <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl text-base font-bold text-white"
+                style="background-color: var(--color-accent);"
+              >
+                05
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-[var(--text-main)]">Аккуратные работы</h3>
+              <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+                Минимизируем лишние раскопки и внимательно работаем на участках клиентов.
+              </p>
+            </div>
+
+            <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl text-base font-bold text-white"
+                style="background-color: var(--color-accent);"
+              >
+                06
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-[var(--text-main)]">Современная установка ГНБ</h3>
+              <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+                Используем установку горизонтального бурения с локатором для точной и
+                контролируемой работы.
+              </p>
+            </div>
+          </div>
+
+          <button
+            id="toggle-benefits"
+            type="button"
+            class="mt-2 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]"
+            style="background-color: var(--color-accent);"
+          >
+            Показать ещё
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Наши работы
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Фото с объектов и выполненных работ
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Реальные примеры работ по проколу под дорогой, земляным работам,
+            наружной канализации и монтажу септиков.
+          </p>
+        </div>
+
+        <div class="mt-12 -mr-6 overflow-x-auto pb-2 md:hidden">
+          <div class="flex gap-4 pr-6 [scroll-snap-type:x_mandatory]">
+            <div class="group relative min-w-[88%] snap-start overflow-hidden rounded-[2rem]">
+              <img
+                src="/images/works/prokol-1.webp"
+                alt="Прокол под дорогой"
+                loading="lazy"
+                class="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                <h3 class="text-xl font-bold">Прокол под дорогой</h3>
+                <p class="mt-2 text-sm text-white/80">Работы на объекте</p>
+              </div>
+            </div>
+
+            <div class="group relative min-w-[88%] snap-start overflow-hidden rounded-[2rem]">
+              <img
+                src="/images/works/excavator-1.webp"
+                alt="Мини-экскаватор на объекте"
+                loading="lazy"
+                class="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                <h3 class="text-xl font-bold">Мини-экскаватор</h3>
+                <p class="mt-2 text-sm text-white/80">Земляные работы</p>
+              </div>
+            </div>
+
+            <div class="group relative min-w-[88%] snap-start overflow-hidden rounded-[2rem]">
+              <img
+                src="/images/works/septik-1.webp"
+                alt="Монтаж септика"
+                loading="lazy"
+                class="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                <h3 class="text-xl font-bold">Монтаж септика</h3>
+                <p class="mt-2 text-sm text-white/80">Частный объект</p>
+              </div>
+            </div>
+
+            <div class="group relative min-w-[88%] snap-start overflow-hidden rounded-[2rem]">
+              <img
+                src="/images/works/prokol-3.webp"
+                alt="Работы по ГНБ"
+                loading="lazy"
+                class="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                <h3 class="text-xl font-bold">ГНБ / прокол</h3>
+                <p class="mt-2 text-sm text-white/80">Прокладка коммуникаций</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-4 pr-6 text-sm text-[var(--text-muted)]">
+            Листайте фото влево, чтобы посмотреть больше работ.
+          </p>
+        </div>
+
+        <div class="mt-12 hidden grid-cols-3 gap-6 md:grid">
+          <div class="group relative overflow-hidden rounded-[2rem]">
+            <img
+              src="/images/works/prokol-1.webp"
+              alt="Прокол под дорогой"
+              loading="lazy"
+              class="h-[22rem] w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-100"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <h3 class="text-2xl font-bold">Прокол под дорогой</h3>
+              <p class="mt-2 text-sm text-white/80">Работы на объекте</p>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-[2rem]">
+            <img
+              src="/images/works/excavator-1.webp"
+              alt="Мини-экскаватор на объекте"
+              loading="lazy"
+              class="h-[22rem] w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-100"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <h3 class="text-2xl font-bold">Мини-экскаватор в работе</h3>
+              <p class="mt-2 text-sm text-white/80">Земляные работы на объекте</p>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-[2rem]">
+            <img
+              src="/images/works/septik-1.webp"
+              alt="Монтаж септика"
+              loading="lazy"
+              class="h-[22rem] w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-100"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <h3 class="text-2xl font-bold">Монтаж септика</h3>
+              <p class="mt-2 text-sm text-white/80">Частный объект</p>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-[2rem]">
+            <img
+              src="/images/works/prokol-2.webp"
+              alt="Работы по ГНБ"
+              loading="lazy"
+              class="h-[22rem] w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-100"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <h3 class="text-2xl font-bold">Работы по ГНБ</h3>
+              <p class="mt-2 text-sm text-white/80">Прокладка коммуникаций</p>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-[2rem]">
+            <img
+              src="/images/works/excavator-2.webp"
+              alt="Мини-экскаватор в работе"
+              loading="lazy"
+              class="h-[22rem] w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-100"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <h3 class="text-2xl font-bold">Мини-экскаватор</h3>
+              <p class="mt-2 text-sm text-white/80">Земляные работы на объекте</p>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-[2rem]">
+            <img
+              src="/images/works/septik-2.webp"
+              alt="Наружная канализация и септик"
+              loading="lazy"
+              class="h-[22rem] w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-100"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <h3 class="text-2xl font-bold">Канализация и септик</h3>
+              <p class="mt-2 text-sm text-white/80">Монтаж и подготовка системы</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Как проходит работа
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Понятный путь от заявки до результата
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Мы стараемся сделать процесс работы простым и понятным: от первого обращения
+            до выезда на объект и выполнения задачи.
+          </p>
+        </div>
+
+        <div class="mt-14 hidden md:block">
+          <div class="relative grid gap-6 md:grid-cols-5">
+            <div class="absolute left-0 right-0 top-6 h-px bg-slate-200"></div>
+
+            <div class="relative">
+              <div
+                class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-white shadow-lg"
+                style="background-color: var(--color-accent);"
+              >
+                01
+              </div>
+              <h3 class="mt-6 text-xl font-bold text-[var(--text-main)]">Заявка</h3>
+              <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+                Вы оставляете заявку или звоните нам удобным способом.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-white shadow-lg"
+                style="background-color: var(--color-accent);"
+              >
+                02
+              </div>
+              <h3 class="mt-6 text-xl font-bold text-[var(--text-main)]">Уточнение задачи</h3>
+              <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+                Обсуждаем тип работ, объект, сроки и ориентируем по стоимости.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-white shadow-lg"
+                style="background-color: var(--color-accent);"
+              >
+                03
+              </div>
+              <h3 class="mt-6 text-xl font-bold text-[var(--text-main)]">Выезд на объект</h3>
+              <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+                При необходимости выезжаем на участок и оцениваем условия работы.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-white shadow-lg"
+                style="background-color: var(--color-accent);"
+              >
+                04
+              </div>
+              <h3 class="mt-6 text-xl font-bold text-[var(--text-main)]">Согласование</h3>
+              <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+                Подтверждаем объём работ, формат выезда и условия сотрудничества.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-white shadow-lg"
+                style="background-color: var(--color-accent);"
+              >
+                05
+              </div>
+              <h3 class="mt-6 text-xl font-bold text-[var(--text-main)]">Выполнение работ</h3>
+              <p class="mt-3 text-sm leading-7 text-[var(--text-muted)]">
+                Выполняем задачу аккуратно, в согласованные сроки и с понятным результатом.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 space-y-4 md:hidden">
+          <div class="flex gap-4 rounded-[2rem] border border-slate-200 bg-slate-50 p-5">
+            <div
+              class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              01
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[var(--text-main)]">Заявка</h3>
+              <p class="mt-2 text-sm leading-7 text-[var(--text-muted)]">
+                Вы оставляете заявку или звоните нам удобным способом.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 rounded-[2rem] border border-slate-200 bg-slate-50 p-5">
+            <div
+              class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              02
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[var(--text-main)]">Уточнение задачи</h3>
+              <p class="mt-2 text-sm leading-7 text-[var(--text-muted)]">
+                Обсуждаем тип работ, объект, сроки и ориентируем по стоимости.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 rounded-[2rem] border border-slate-200 bg-slate-50 p-5">
+            <div
+              class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              03
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[var(--text-main)]">Выезд на объект</h3>
+              <p class="mt-2 text-sm leading-7 text-[var(--text-muted)]">
+                При необходимости выезжаем на участок и оцениваем условия работы.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 rounded-[2rem] border border-slate-200 bg-slate-50 p-5">
+            <div
+              class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              04
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[var(--text-main)]">Согласование</h3>
+              <p class="mt-2 text-sm leading-7 text-[var(--text-muted)]">
+                Подтверждаем объём работ, формат выезда и условия сотрудничества.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 rounded-[2rem] border border-slate-200 bg-slate-50 p-5">
+            <div
+              class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+              style="background-color: var(--color-accent);"
+            >
+              05
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[var(--text-main)]">Выполнение работ</h3>
+              <p class="mt-2 text-sm leading-7 text-[var(--text-muted)]">
+                Выполняем задачу аккуратно, в согласованные сроки и с понятным результатом.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Стоимость
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Ориентировочная стоимость услуг
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Ниже указаны стартовые ориентиры. Точная стоимость зависит от типа работ,
+            объёма, условий на объекте и удалённости.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.2em]"
+              style="color: var(--color-accent);"
+            >
+              Услуга 01
+            </p>
+            <h3 class="mt-5 text-2xl font-bold text-[var(--text-main)]">
+              Прокол под дорогой
+            </h3>
+            <div class="mt-6 text-4xl font-extrabold text-[var(--text-main)]">
+              от 100 руб
+            </div>
+            <p class="mt-2 text-sm leading-7 text-[var(--text-muted)]">
+              за метр прокола
+            </p>
+          </div>
+
+          <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.2em]"
+              style="color: var(--color-accent);"
+            >
+              Услуга 02
+            </p>
+            <h3 class="mt-5 text-2xl font-bold text-[var(--text-main)]">
+              Аренда мини-экскаватора
+            </h3>
+            <div class="mt-6 text-4xl font-extrabold text-[var(--text-main)]">
+              от 80 руб
+            </div>
+            <p class="mt-2 text-sm leading-7 text-[var(--text-muted)]">
+              за час работы
+            </p>
+          </div>
+
+          <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.2em]"
+              style="color: var(--color-accent);"
+            >
+              Условие
+            </p>
+            <h3 class="mt-5 text-2xl font-bold text-[var(--text-main)]">
+              Минимальный выезд
+            </h3>
+            <div class="mt-6 text-4xl font-extrabold text-[var(--text-main)]">
+              от 4 часов
+            </div>
+            <p class="mt-2 text-sm leading-7 text-[var(--text-muted)]">
+              для аренды мини-экскаватора
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-[2rem] border border-slate-200 bg-white px-6 py-5 text-sm leading-7 text-[var(--text-muted)]">
+          Точная стоимость рассчитывается индивидуально после уточнения задачи,
+          объёма работ и особенностей объекта.
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-3xl">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.2em]"
+              style="color: var(--color-accent);"
+            >
+              Отзывы
+            </p>
+            <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+              Что говорят клиенты
+            </h2>
+            <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+              Несколько примеров отзывов о работе, качестве выполнения задач и подходе к объекту.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button
+              id="reviews-prev"
+              type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-[var(--text-main)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              aria-label="Предыдущий отзыв"
+            >
+              ←
+            </button>
+
+            <button
+              id="reviews-next"
+              type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-[var(--text-main)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              aria-label="Следующий отзыв"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-12 overflow-hidden">
+          <div
+            id="reviews-track"
+            class="flex transition-transform duration-700 ease-out"
+            style="transform: translateX(0%);"
+          >
+            <div class="w-full shrink-0 pr-0 md:w-1/2 md:pr-3">
+              <div class="h-full rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
+                <div class="text-4xl leading-none" style="color: var(--color-accent);">“</div>
+                <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+                  Делали прокол под дорогой аккуратно и без лишних вопросов. Всё объяснили
+                  заранее, приехали вовремя, работу выполнили быстро и спокойно.
+                </p>
+                <div class="mt-8">
+                  <div class="text-lg font-bold text-[var(--text-main)]">Андрей</div>
+                  <div class="mt-1 text-sm text-[var(--text-muted)]">частный заказчик</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full shrink-0 pr-0 md:w-1/2 md:px-3">
+              <div class="h-full rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
+                <div class="text-4xl leading-none" style="color: var(--color-accent);">“</div>
+                <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+                  Заказывали мини-экскаватор для траншей и подготовки участка. Всё сделали
+                  аккуратно, без суеты, техника приехала вовремя, результатом довольны.
+                </p>
+                <div class="mt-8">
+                  <div class="text-lg font-bold text-[var(--text-main)]">Сергей</div>
+                  <div class="mt-1 text-sm text-[var(--text-muted)]">частный объект</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full shrink-0 pr-0 md:w-1/2 md:pl-3">
+              <div class="h-full rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
+                <div class="text-4xl leading-none" style="color: var(--color-accent);">“</div>
+                <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+                  Обращались по наружной канализации и монтажу септика. Понравился подход:
+                  всё по делу, с выездом, без обещаний “на глаз”, работу сделали аккуратно.
+                </p>
+                <div class="mt-8">
+                  <div class="text-lg font-bold text-[var(--text-main)]">Игорь</div>
+                  <div class="mt-1 text-sm text-[var(--text-muted)]">частный дом</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-[var(--text-light)]" style="background-color: var(--color-brand);">
+  <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+    <div class="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-900 px-8 py-12 shadow-2xl md:px-12 md:py-16">
+      <div
+        class="pointer-events-none absolute inset-0 opacity-70"
+        style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 40%);"
+      ></div>
+
+      <div class="relative max-w-3xl">
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.2em]"
+          style="color: var(--color-accent);"
+        >
+          Получить расчёт
+        </p>
+
+        <h2 class="mt-4 text-3xl font-extrabold leading-tight md:text-5xl">
+          Нужен прокол под дорогой, мини-экскаватор или монтаж септика?
+        </h2>
+
+        <p class="mt-6 text-base leading-8 text-[var(--text-light)]/80 md:text-lg">
+          Свяжитесь с нами удобным способом. Поможем понять объём работ, подскажем
+          ориентир по стоимости и предложим подходящее решение под ваш объект.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="/contacts"
+            class="rounded-full px-6 py-4 text-center text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+            style="background-color: var(--color-accent);"
+          >
+            Оставить заявку
+          </a>
+
+          <a
+            href="tel:+375296326650"
+            class="rounded-full border border-slate-600 px-6 py-4 text-center text-base font-semibold text-white transition duration-300 hover:border-slate-400 hover:bg-slate-800"
+          >
+            Позвонить
+          </a>
+        </div>
+
+        <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/75">
+          <a
+            href="https://wa.me/375296326650"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition hover:text-white"
+          >
+            WhatsApp
+          </a>
+
+          <span class="text-white/25">•</span>
+
+          <a
+            href="https://t.me/+375296326650"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition hover:text-white"
+          >
+            Telegram
+          </a>
+
+          <span class="text-white/25">•</span>
+
+          <a
+            href="viber://chat?number=%2B375296326650"
+            class="transition hover:text-white"
+          >
+            Viber
+          </a>
+
+          <span class="text-white/25">•</span>
+
+          <a
+            href="mailto:dekolux@internet.ru"
+            class="transition hover:text-white"
+          >
+            dekolux@internet.ru
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <Footer />
+</MainLayout>
+
+<script>
+window.addEventListener("load", () => {
+  document.querySelectorAll(".hero-fade-up").forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.add("show");
+    }, i * 450);
+  });
+});
+
+const toggleBenefits = document.getElementById("toggle-benefits");
+const moreBenefits = document.getElementById("more-benefits");
+
+if (toggleBenefits && moreBenefits) {
+  toggleBenefits.addEventListener("click", () => {
+    const isHidden = moreBenefits.classList.contains("hidden");
+    moreBenefits.classList.toggle("hidden");
+    toggleBenefits.textContent = isHidden ? "Скрыть" : "Показать ещё";
+  });
+}
+
+const reviewsTrack = document.getElementById("reviews-track");
+const reviewsPrev = document.getElementById("reviews-prev");
+const reviewsNext = document.getElementById("reviews-next");
+
+if (reviewsTrack && reviewsPrev && reviewsNext) {
+  let currentIndex = 0;
+  const totalSlides = 3;
+
+  const updateSlider = () => {
+    const isDesktop = window.innerWidth >= 768;
+    const offset = isDesktop ? currentIndex * 50 : currentIndex * 100;
+    reviewsTrack.style.transform = `translateX(-${offset}%)`;
+  };
+
+  reviewsNext.addEventListener("click", () => {
+    const isDesktop = window.innerWidth >= 768;
+    const maxIndex = isDesktop ? 1 : totalSlides - 1;
+    currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+    updateSlider();
+  });
+
+  reviewsPrev.addEventListener("click", () => {
+    const isDesktop = window.innerWidth >= 768;
+    const maxIndex = isDesktop ? 1 : totalSlides - 1;
+    currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+    updateSlider();
+  });
+
+  window.addEventListener("resize", updateSlider);
+  updateSlider();
+}
+</script>

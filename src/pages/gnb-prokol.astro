@@ -1,0 +1,289 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "Прокол под дорогой / ГНБ в Могилёве — Dekolux";
+const description =
+  "Прокол под дорогой и горизонтально направленное бурение в Могилёве и области. Собственная техника, быстрый выезд, работа по договору.";
+---
+
+<MainLayout title={title} description={description}>
+  <Header />
+
+  <main>
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0f1b30] via-[#12223c] to-[#0c1628] text-[var(--text-light)]">
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
+        <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-cyan-400/5 blur-3xl"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-4xl">
+          <div
+            class="mb-6 inline-flex rounded-full border px-4 py-2 text-sm font-medium"
+            style="
+              border-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+              background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+              color: #fed7aa;
+            "
+          >
+            Услуга №1 • Могилёв и Могилёвская область
+          </div>
+
+          <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
+            Прокол под дорогой и ГНБ
+            <span style="color: var(--color-accent);">без вскрытия покрытия</span>
+          </h1>
+
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-[var(--text-light)]/80">
+            Выполняем прокладку коммуникаций методом горизонтально направленного
+            бурения. Работаем аккуратно, используем собственную технику и
+            выезжаем по Могилёву и области.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="/contacts"
+              class="rounded-full px-6 py-4 text-center text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+              style="background-color: var(--color-accent);"
+            >
+              Получить расчёт
+            </a>
+
+            <a
+              href="tel:+375296326650"
+              class="rounded-full border border-white/15 bg-white/5 px-6 py-4 text-center text-base font-semibold text-[var(--text-light)] backdrop-blur transition duration-300 hover:border-white/30 hover:bg-white/10"
+            >
+              Связаться с нами
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">от 100 руб</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              стоимость за метр прокола
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">5+ лет</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              опыта выполнения работ
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">Своя техника</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              установка ГНБ с локатором
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-2 md:py-28">
+        <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Описание услуги
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Когда нужен прокол под дорогой
+          </h2>
+          <p class="mt-6 max-w-3xl text-base leading-8 text-[var(--text-muted)]">
+            Метод ГНБ применяется, когда нужно провести коммуникации без вскрытия
+            дороги, двора, подъездного пути или другого покрытия. Это удобно для
+            прокладки труб, кабеля, воды, канализации и других инженерных сетей.
+          </p>
+          <p class="mt-4 max-w-3xl text-base leading-8 text-[var(--text-muted)]">
+            Такой способ позволяет выполнить работы аккуратно, снизить объём
+            раскопок и не разрушать поверхность там, где это особенно важно.
+          </p>
+        </div>
+
+        <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-[var(--text-main)]">Что входит в услугу</h3>
+
+          <div class="mt-6 space-y-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Консультация и предварительная оценка объекта
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Выезд на объект и согласование работ
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Выполнение прокола под дорогой / покрытием
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Работа по договору
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Преимущества
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Почему клиенты обращаются в Dekolux
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Работаем на собственном оборудовании, быстро выезжаем по области и
+            подходим к каждой задаче аккуратно и прозрачно.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Собственная техника</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Работаем на своём оборудовании, без лишних посредников.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Быстрый выезд</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Оперативно выезжаем по Могилёву и области.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Аккуратные работы</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Минимизируем раскопки и сохраняем покрытие там, где это возможно.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Договор</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Работаем официально и прозрачно.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Этапы работы
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Как проходит работа
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Делаем процесс понятным: от первого обращения и оценки объекта до
+            выполнения работ в согласованные сроки.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">01</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Заявка</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Вы оставляете заявку или звоните.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">02</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Консультация</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Уточняем задачу и ориентируем по стоимости.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">03</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Выезд</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Выезжаем на объект и оцениваем условия.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">04</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Договор</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Согласовываем объём работ и условия.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">05</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Выполнение работ</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Выполняем прокол аккуратно и в согласованные сроки.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-[var(--text-light)]" style="background-color: var(--color-brand);">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-900 p-8 md:p-12">
+          <div
+            class="pointer-events-none absolute inset-0 opacity-70"
+            style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 40%);"
+          ></div>
+
+          <div class="relative max-w-3xl">
+            <h2 class="text-3xl font-extrabold md:text-4xl">
+              Нужен прокол под дорогой в Могилёве или области?
+            </h2>
+            <p class="mt-4 max-w-2xl text-base leading-8 text-[var(--text-light)]/80">
+              Свяжитесь с нами, и мы поможем оценить объект, подскажем по стоимости
+              и предложим подходящее решение.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/contacts"
+                class="rounded-full px-6 py-4 text-center text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+                style="background-color: var(--color-accent);"
+              >
+                Получить расчёт
+              </a>
+
+              <a
+                href="tel:+375296326650"
+                class="rounded-full border border-slate-700 px-6 py-4 text-center text-base font-semibold text-[var(--text-light)] transition duration-300 hover:border-slate-500 hover:bg-slate-800"
+              >
+                Позвонить
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</MainLayout>
