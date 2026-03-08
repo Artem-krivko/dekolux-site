@@ -6,7 +6,10 @@ export const POST: APIRoute = async ({ request }) => {
 
     if (!name || !phone) {
       return new Response(
-        JSON.stringify({ success: false, error: "Не заполнены обязательные поля" }),
+        JSON.stringify({
+          success: false,
+          error: "Пожалуйста заполните имя и телефон",
+        }),
         { status: 400 }
       );
     }
@@ -15,7 +18,10 @@ export const POST: APIRoute = async ({ request }) => {
 
     if (!resendApiKey) {
       return new Response(
-        JSON.stringify({ success: false, error: "RESEND_API_KEY is missing" }),
+        JSON.stringify({
+          success: false,
+          error: "RESEND_API_KEY is missing",
+        }),
         { status: 500 }
       );
     }
@@ -28,31 +34,48 @@ export const POST: APIRoute = async ({ request }) => {
       },
       body: JSON.stringify({
         from: "Dekolux <onboarding@resend.dev>",
-        to: ["dekolux@internet.ru"],
+        to: ["krivko219319@gmail.com"],
+
         subject: "Новая заявка с сайта Dekolux",
+
         html: `
           <h2>Новая заявка с сайта</h2>
+
           <p><strong>Имя:</strong> ${name}</p>
+
           <p><strong>Телефон:</strong> ${phone}</p>
+
           <p><strong>Услуга:</strong> ${service || "Не указана"}</p>
+
           <p><strong>Комментарий:</strong> ${message || "Не указан"}</p>
         `,
       }),
     });
 
-    const resendData = await resendResponse.text();
+    const data = await resendResponse.text();
 
     if (!resendResponse.ok) {
       return new Response(
-        JSON.stringify({ success: false, error: resendData }),
+        JSON.stringify({
+          success: false,
+          error: data,
+        }),
         { status: 500 }
       );
     }
 
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
+    return new Response(
+      JSON.stringify({
+        success: true,
+      }),
+      { status: 200 }
+    );
   } catch (error) {
     return new Response(
-      JSON.stringify({ success: false, error: "Server error" }),
+      JSON.stringify({
+        success: false,
+        error: "Server error",
+      }),
       { status: 500 }
     );
   }
