@@ -1,0 +1,81 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { cityPages } from "../../data/city-pages";
+
+const title = "Прокол под дорогой в городах Могилёвской области — Dekolux";
+const description =
+  "Прокол под дорогой методом ГНБ в городах Могилёвской области: Бобруйск, Осиповичи, Шклов, Чаусы, Горки, Круглое, Климовичи.";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://dekolux.by/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Прокол под дорогой в городах",
+      item: "https://dekolux.by/prokol-pod-dorogoy/",
+    },
+  ],
+};
+---
+
+<MainLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <Header />
+
+  <nav class="mx-auto max-w-7xl px-6 pt-5 text-sm text-slate-500 md:pt-6">
+    <a href="/" class="hover:text-slate-700">Главная</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-700">Прокол под дорогой в городах</span>
+  </nav>
+
+  <main>
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
+        <div class="max-w-4xl">
+          <h1 class="text-3xl font-extrabold tracking-tight text-[var(--text-main)] sm:text-4xl md:text-5xl">
+            Прокол под дорогой в городах Могилёвской области
+          </h1>
+
+          <p class="mt-6 text-base leading-8 text-[var(--text-muted)] sm:text-lg">
+            Выполняем прокол под дорогой методом ГНБ, прокладку труб и кабеля,
+            а также сопутствующие земляные работы в городах Могилёвской области.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          {cityPages.map((item) => (
+            <a
+              href={`/prokol-pod-dorogoy/${item.slug}`}
+              class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md md:rounded-[2rem] md:p-8"
+            >
+              <div class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 sm:text-sm">
+                Могилёвская область
+              </div>
+              <h2 class="mt-4 text-2xl font-bold text-[var(--text-main)]">
+                {item.cityTitle}
+              </h2>
+              <p class="mt-4 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
+                Прокол под дорогой, ГНБ и прокладка коммуникаций в {item.cityTitle}.
+              </p>
+              <div class="mt-6 font-semibold" style="color: var(--color-accent);">
+                Перейти →
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</MainLayout>
