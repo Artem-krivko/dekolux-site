@@ -36,11 +36,35 @@ const description =
     }
   ]
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://dekolux.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Канализация и септики",
+      item: "https://dekolux.vercel.app/kanalizaciya-septiki"
+    }
+  ]
+};
+
 ---
 
 <MainLayout title={title} description={description}>
      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Header />
+  <nav class="mx-auto max-w-7xl px-6 pt-6 text-sm text-slate-500">
+  <a href="/" class="hover:text-slate-700">Главная</a>
+  <span class="mx-2">/</span>
+  <span class="text-slate-700">Канализация и септики</span>
+</nav>
 
   <main>
     <section class="relative overflow-hidden bg-gradient-to-br from-[#0f1b30] via-[#12223c] to-[#0c1628] text-[var(--text-light)]">
@@ -430,4 +454,7 @@ const description =
 </script>
 
   <Footer />
+  <script type="application/ld+json">
+  {JSON.stringify(breadcrumbSchema)}
+  </script>
 </MainLayout>
