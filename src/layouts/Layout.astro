@@ -1,63 +1,57 @@
 ---
-const { title = "Dekolux — прокол под дорогой и земляные работы в Могилёве",
-description = "Прокол под дорогой (ГНБ), аренда мини-экскаватора, наружная канализация и монтаж септиков в Могилёве и области." } = Astro.props;
+const siteUrl = "https://dekolux.by";
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Dekolux",
+  url: siteUrl,
+  telephone: "+375296326650",
+  email: "dekolux@internet.ru",
+  areaServed: "Могилёв и Могилёвская область",
+  description:
+    "Прокол под дорогой (ГНБ), аренда мини-экскаватора, наружная канализация и монтаж септиков в Могилёве и Могилёвской области",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Могилёв",
+    addressCountry: "BY"
+  }
+};
 ---
 
 <!doctype html>
 <html lang="ru">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
 
-<title>{title}</title>
-<meta name="description" content={description} />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:image" content={`${siteUrl}/og-cover.jpg`} />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" href="/favicon.ico" />
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+      {JSON.stringify(localBusinessSchema)}
+    </script>
 
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dekolux.by" />
+    <slot name="head" />
+  </head>
 
-<meta name="generator" content={Astro.generator} />
-
-<!-- Schema.org LocalBusiness -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "LocalBusiness",
-"name": "Dekolux",
-"url": "https://dekolux.by",
-"telephone": "+375296326650",
-"email": "dekolux@internet.ru",
-"areaServed": "Могилёв и Могилёвская область",
-"description": "Прокол под дорогой (ГНБ), аренда мини-экскаватора, наружная канализация и монтаж септиков.",
-"address": {
-"@type": "PostalAddress",
-"addressLocality": "Могилёв",
-"addressCountry": "BY"
-},
-"sameAs": [
-"https://wa.me/375296326650",
-"https://t.me/+375296326650"
-]
-}
-</script>
-
-</head>
-
-<body>
-<slot />
-</body>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-html,
-body {
-margin: 0;
-width: 100%;
-height: 100%;
-}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
