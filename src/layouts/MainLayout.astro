@@ -1,26 +1,74 @@
 ---
-import "../styles/global.css";
-
-interface Props {
-  title?: string;
-  description?: string;
-}
-
 const {
-  title = "Dekolux",
-  description = "Прокол под дорогой, ГНБ, аренда мини-экскаватора, наружная канализация и монтаж септиков в Могилёве и области.",
+  title = "Dekolux — прокол под дорогой и земляные работы в Могилёве",
+  description = "Прокол под дорогой (ГНБ), аренда мини-экскаватора, наружная канализация и монтаж септиков в Могилёве и области.",
+  image = "/og-cover.jpg"
 } = Astro.props;
+
+const siteUrl = "https://dekolux.vercel.app";
+const canonical = new URL(Astro.url.pathname, siteUrl).toString();
+const ogImage = new URL(image, siteUrl).toString();
 ---
 
+<!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <body class="bg-white text-[var(--text-main)]">
-    <slot />
-  </body>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <meta name="generator" content={Astro.generator} />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="Dekolux" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Dekolux",
+    "url": siteUrl,
+    "telephone": "+375296326650",
+    "email": "dekolux@internet.ru",
+    "areaServed": "Могилёв и Могилёвская область",
+    "description": "Прокол под дорогой (ГНБ), аренда мини-экскаватора, наружная канализация и монтаж септиков.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Могилёв",
+      "addressCountry": "BY"
+    },
+    "sameAs": [
+      "https://wa.me/375296326650",
+      "https://t.me/+375296326650"
+    ]
+  })} />
+</head>
+
+<body>
+  <slot />
+</body>
 </html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+  }
+</style>
