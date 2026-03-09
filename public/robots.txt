@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dekolux.vercel.app/sitemap-index.xml
+Sitemap: https://dekolux-site.vercel.app/sitemap-index.xml
