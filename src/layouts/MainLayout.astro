@@ -7,7 +7,7 @@ const {
   image = "/og-cover.jpg",
 } = Astro.props;
 
-const siteUrl = "https://dekolux-site.vercel.app";
+const siteUrl = "https://dekolux.by";
 const canonical = new URL(Astro.url.pathname, siteUrl).toString();
 const ogImage = new URL(image, siteUrl).toString();
 ---

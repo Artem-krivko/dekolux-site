@@ -5,7 +5,7 @@ import vercel from '@astrojs/vercel/serverless';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: "https://dekolux.vercel.app",
+  site: "https://dekolux.by",
 
   output: "server",
   adapter: vercel({}),
