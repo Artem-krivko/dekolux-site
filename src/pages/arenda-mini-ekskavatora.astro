@@ -316,77 +316,111 @@ const description =
     </h2>
 
     <div class="mt-8 space-y-4">
-      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-        <h3 class="text-lg font-bold text-[var(--text-main)]">
-          Для каких работ подходит мини-экскаватор?
-        </h3>
-        <p class="mt-3 text-base leading-8 text-[var(--text-muted)]">
-          Мини-экскаватор подходит для копки траншей, котлованов, подготовки участка,
-          земляных работ под коммуникации и благоустройство.
+      <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+          <span>Для каких работ подходит мини-экскаватор?</span>
+          <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+          Мини-экскаватор подходит для копки траншей под коммуникации, подготовки котлованов,
+          выравнивания участка, монтажа канализации и других земляных работ.
         </p>
-      </div>
+      </details>
 
-      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-        <h3 class="text-lg font-bold text-[var(--text-main)]">
-          Какой минимальный выезд?
-        </h3>
-        <p class="mt-3 text-base leading-8 text-[var(--text-muted)]">
-          Минимальный выезд зависит от типа задачи и удалённости объекта,
-          но обычно рассчитывается от нескольких часов работы.
+      <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+          <span>Можно ли использовать мини-экскаватор на частном участке?</span>
+          <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+          Да, мини-экскаватор отлично подходит для работы на частных участках,
+          где требуется аккуратная техника для копки траншей или подготовки основания.
         </p>
-      </div>
+      </details>
 
-      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-        <h3 class="text-lg font-bold text-[var(--text-main)]">
-          Можно ли использовать мини-экскаватор на частном участке?
-        </h3>
-        <p class="mt-3 text-base leading-8 text-[var(--text-muted)]">
-          Да, мини-экскаватор особенно удобен для частных участков, где важно аккуратно работать
-          на ограниченном пространстве.
+      <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+          <span>От чего зависит стоимость аренды мини-экскаватора?</span>
+          <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+          Цена зависит от объёма работ, времени аренды, условий участка
+          и удалённости объекта в Могилёве или области.
         </p>
-      </div>
+      </details>
     </div>
   </div>
 </section>
 
-  <section class="bg-slate-50 py-20">
+<section class="bg-slate-50 py-20">
   <div class="mx-auto max-w-4xl px-6">
 
-    <h2 class="text-2xl font-bold mb-6">
+    <h2 class="mb-6 text-2xl font-bold text-[var(--text-main)]">
       Аренда мини-экскаватора в Могилёве
     </h2>
 
-    <p class="text-lg leading-8 text-slate-600 mb-6">
-      Мини-экскаватор — удобная техника для выполнения земляных работ
-      на частных участках и строительных объектах. С его помощью можно
-      быстро копать траншеи под коммуникации, готовить котлованы,
-      выполнять планировку участка и другие работы.
-    </p>
+    <div class="space-y-6 text-lg leading-8 text-slate-600">
+      <p>
+        Мини-экскаватор — удобная техника для выполнения земляных работ
+        на частных участках и строительных объектах. С его помощью можно
+        быстро копать траншеи под коммуникации, готовить котлованы и
+        выполнять подготовку участка.
+      </p>
 
-    <p class="text-lg leading-8 text-slate-600 mb-6">
-      Компания Dekolux предлагает аренду мини-экскаватора в Могилёве
-      и Могилёвской области. Мы работаем на собственной технике,
-      обеспечиваем аккуратное выполнение работ и выезд на объект
-      в удобное для клиента время.
-    </p>
-    <p class="text-lg leading-8 text-slate-600 mb-6">
-  Мини-экскаватор часто используется для подготовки траншей
-  перед выполнением
-  <a href="/gnb-prokol" class="text-[var(--color-accent)] hover:underline">
-    прокола под дорогой методом ГНБ
-  </a>.
-</p>
+      <div id="seo-more-excavator" class="hidden space-y-6 md:block">
 
-<p class="text-lg leading-8 text-slate-600">
-  Также техника применяется при
-  <a href="/kanalizaciya-septiki" class="text-[var(--color-accent)] hover:underline">
-    монтаже наружной канализации и септиков
-  </a>
-  на частных участках.
-</p>
+        <p>
+          Компания Dekolux предлагает аренду мини-экскаватора в Могилёве
+          и Могилёвской области. Мы работаем на собственной технике,
+          что позволяет быстро выезжать на объект и выполнять работы
+          аккуратно и без задержек.
+        </p>
+
+        <p>
+          Мини-экскаватор часто используется для подготовки траншей перед
+          выполнением
+          <a href="/gnb-prokol" class="text-orange-500 hover:underline">
+            прокола под дорогой методом ГНБ
+          </a>
+          или для работ по
+          <a href="/kanalizaciya-septiki" class="text-orange-500 hover:underline">
+            монтажу наружной канализации и установке септиков
+          </a>.
+        </p>
+
+        <p>
+          Техника подходит для копки траншей под водопровод,
+          канализацию, кабельные линии и другие коммуникации.
+          Благодаря компактным размерам мини-экскаватор может
+          работать даже на небольших участках.
+        </p>
+
+      </div>
+    </div>
+
+    <button
+      id="seo-toggle-excavator"
+      type="button"
+      class="mt-6 inline-flex rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-[var(--text-main)] transition hover:border-slate-400 hover:bg-white md:hidden"
+    >
+      Читать дальше
+    </button>
 
   </div>
 </section>
+
+<script is:inline>
+  const seoToggleExcavator = document.getElementById("seo-toggle-excavator");
+  const seoMoreExcavator = document.getElementById("seo-more-excavator");
+
+  if (seoToggleExcavator && seoMoreExcavator) {
+    seoToggleExcavator.addEventListener("click", () => {
+      const isHidden = seoMoreExcavator.classList.contains("hidden");
+      seoMoreExcavator.classList.toggle("hidden");
+      seoToggleExcavator.textContent = isHidden ? "Свернуть" : "Читать дальше";
+    });
+  }
+</script>
 
   <Footer />
 </MainLayout>
