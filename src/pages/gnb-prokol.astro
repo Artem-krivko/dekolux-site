@@ -6,9 +6,41 @@ import Footer from "../components/Footer.astro";
 const title = "Прокол под дорогой и ГНБ в Могилёве — Dekolux";
 const description =
   "Прокол под дорогой и горизонтально направленное бурение в Могилёве и области. Прокладка коммуникаций без вскрытия покрытия, собственная техника, быстрый выезд.";
+
+  const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Что такое прокол под дорогой?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Это способ прокладки коммуникаций под дорогой без вскрытия асфальта и разрушения покрытия. Чаще всего для этого используется метод горизонтально направленного бурения."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли сделать прокол без вскрытия асфальта?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, именно в этом и заключается главное преимущество ГНБ: коммуникации прокладываются под дорогой без демонтажа покрытия."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "От чего зависит стоимость прокола под дорогой?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Стоимость зависит от длины прокола, типа грунта, диаметра коммуникаций, условий на объекте и особенностей подъезда техники."
+      }
+    }
+  ]
+};
 ---
 
 <MainLayout title={title} description={description}>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Header />
 
   <main>
@@ -284,6 +316,45 @@ const description =
       </div>
     </section>
   </main>
+  <section class="bg-white">
+  <div class="mx-auto max-w-4xl px-6 py-20">
+    <h2 class="text-2xl font-bold text-[var(--text-main)] md:text-3xl">
+      Частые вопросы о проколе под дорогой
+    </h2>
+
+    <div class="mt-8 space-y-4">
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <h3 class="text-lg font-bold text-[var(--text-main)]">
+          Что такое прокол под дорогой?
+        </h3>
+        <p class="mt-3 text-base leading-8 text-[var(--text-muted)]">
+          Это способ прокладки коммуникаций под дорогой без вскрытия асфальта и разрушения покрытия.
+          Чаще всего для этого используется метод горизонтально направленного бурения.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <h3 class="text-lg font-bold text-[var(--text-main)]">
+          Можно ли сделать прокол без вскрытия асфальта?
+        </h3>
+        <p class="mt-3 text-base leading-8 text-[var(--text-muted)]">
+          Да, именно в этом и заключается главное преимущество ГНБ: коммуникации прокладываются
+          под дорогой без демонтажа покрытия.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <h3 class="text-lg font-bold text-[var(--text-main)]">
+          От чего зависит стоимость прокола под дорогой?
+        </h3>
+        <p class="mt-3 text-base leading-8 text-[var(--text-muted)]">
+          Стоимость зависит от длины прокола, типа грунта, диаметра коммуникаций, условий на объекте
+          и особенностей подъезда техники.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="bg-slate-50 py-20">
   <div class="mx-auto max-w-4xl px-6">
