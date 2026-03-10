@@ -1,4 +1,6 @@
 ---
+export const prerender = true;
+
 import MainLayout from "../../layouts/MainLayout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
@@ -315,19 +317,18 @@ const faqSchema = {
       </div>
     </section>
 
-    <script is:inline>
-      const slug = {JSON.stringify(item.slug)};
-      const seoToggle = document.getElementById(`seo-toggle-${slug}`);
-      const seoMore = document.getElementById(`seo-more-${slug}`);
+    <script is:inline define:vars={{ slug: item.slug }}>
+  const seoToggle = document.getElementById(`seo-toggle-${slug}`);
+  const seoMore = document.getElementById(`seo-more-${slug}`);
 
-      if (seoToggle && seoMore) {
-        seoToggle.addEventListener("click", () => {
-          const isHidden = seoMore.classList.contains("hidden");
-          seoMore.classList.toggle("hidden");
-          seoToggle.textContent = isHidden ? "Свернуть" : "Читать дальше";
-        });
-      }
-    </script>
+  if (seoToggle && seoMore) {
+    seoToggle.addEventListener("click", () => {
+      const isHidden = seoMore.classList.contains("hidden");
+      seoMore.classList.toggle("hidden");
+      seoToggle.textContent = isHidden ? "Свернуть" : "Читать дальше";
+    });
+  }
+</script>
   </main>
 
   <Footer />
