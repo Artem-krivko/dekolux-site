@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import CallButton from "../components/CallButton.astro";
 
 const {
   title = "Dekolux — прокол под дорогой и земляные работы в Могилёве",
@@ -67,5 +68,6 @@ const ogImage = new URL(image, siteUrl).toString();
 
   <body>
     <slot />
+    <CallButton />
   </body>
 </html>
