@@ -25,10 +25,50 @@ const breadcrumbSchema = {
     },
   ],
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Почему на сайте указана цена “от”?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Итоговая стоимость зависит от сложности объекта, длины прокола, типа грунта, условий участка, срока аренды техники и других факторов. Поэтому на сайте указан ориентир, а точный расчёт делается после уточнения задачи.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Сколько стоит прокол под дорогой?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ориентировочная стоимость прокола под дорогой начинается от 80 рублей за метр. Точная цена зависит от длины прокола, типа грунта, диаметра трубы и условий выполнения работ.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Сколько стоит аренда мини-экскаватора?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ориентировочная стоимость аренды мини-экскаватора начинается от 80 рублей в час. Минимальный выезд — от 4 часов. При долгосрочной аренде стоимость может быть ниже.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Можно ли узнать точную стоимость заранее?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Да. После короткого обсуждения задачи можно получить ориентировочный расчёт под конкретный объект в Могилёве или области.",
+      },
+    },
+  ],
+};
 ---
 
 <MainLayout title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <Header />
 
   <nav class="mx-auto max-w-7xl px-6 pt-5 text-sm text-slate-500 md:pt-6">
@@ -42,6 +82,7 @@ const breadcrumbSchema = {
       <div class="pointer-events-none absolute inset-0">
         <div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
         <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-cyan-400/5 blur-3xl"></div>
       </div>
 
       <div class="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-28">
@@ -62,9 +103,9 @@ const breadcrumbSchema = {
           </h1>
 
           <p class="mt-6 max-w-3xl text-base leading-8 text-[var(--text-light)]/80 sm:text-lg">
-            Ниже указаны ориентировочные цены на прокол под дорогой и аренду мини-экскаватора.
-            Точная стоимость зависит от объёма работ, сложности объекта, условий подъезда
-            и особенностей конкретной задачи.
+            Ниже указаны ориентировочные цены на прокол под дорогой и аренду
+            мини-экскаватора. Точная стоимость рассчитывается индивидуально
+            в зависимости от сложности объекта, объёма работ и условий выполнения задачи.
           </p>
 
           <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
@@ -77,10 +118,10 @@ const breadcrumbSchema = {
             </a>
 
             <a
-              href="tel:+375296326650"
+              href="tel:+375293326650"
               class="inline-flex items-center justify-center rounded-full border border-slate-700 px-6 py-4 text-center text-base font-semibold text-[var(--text-light)] transition duration-300 hover:border-slate-500 hover:bg-slate-800"
             >
-              Позвонить
+              Позвонить: +375 (29) 332-66-50
             </a>
           </div>
         </div>
@@ -90,25 +131,25 @@ const breadcrumbSchema = {
     <section class="bg-white">
       <div class="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
         <div class="grid gap-6 lg:grid-cols-2">
-          <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8">
+          <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8 md:p-10">
             <div class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
               Прокол под дорогой / ГНБ
             </div>
 
-            <div class="mt-4 text-3xl font-extrabold text-[var(--text-main)] sm:text-4xl">
+            <div class="mt-4 text-3xl font-extrabold text-[var(--text-main)] sm:text-4xl md:text-5xl">
               от 80 руб / м
             </div>
 
             <p class="mt-4 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
-              Ориентировочная стоимость прокола под дорогой методом ГНБ начинается от 80 руб
-              за метр. Итоговая цена рассчитывается индивидуально и зависит от длины прокола,
-              типа грунта, диаметра трубы, сложности объекта и условий выполнения работ.
+              Ориентировочная стоимость прокола под дорогой методом ГНБ начинается
+              от 80 рублей за метр. Точная цена зависит от длины прокола, типа грунта,
+              диаметра трубы, сложности объекта и условий выполнения работ.
             </p>
 
-            <ul class="mt-6 space-y-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base">
-              <li>• цена может быть выше или ниже в зависимости от сложности объекта</li>
-              <li>• учитывается длина прокола и условия на участке</li>
-              <li>• точную стоимость сообщаем после уточнения задачи</li>
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
+              <li>• цена может быть выше или ниже в зависимости от объекта</li>
+              <li>• учитываются длина прокола и условия на участке</li>
+              <li>• расчёт делаем после уточнения задачи</li>
             </ul>
 
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -129,12 +170,12 @@ const breadcrumbSchema = {
             </div>
           </div>
 
-          <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8">
+          <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8 md:p-10">
             <div class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
               Аренда мини-экскаватора
             </div>
 
-            <div class="mt-4 text-3xl font-extrabold text-[var(--text-main)] sm:text-4xl">
+            <div class="mt-4 text-3xl font-extrabold text-[var(--text-main)] sm:text-4xl md:text-5xl">
               от 80 руб / час
             </div>
 
@@ -143,15 +184,15 @@ const breadcrumbSchema = {
             </p>
 
             <p class="mt-4 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
-              Стоимость аренды мини-экскаватора с оператором начинается от 80 руб в час.
-              Минимальный выезд — от 4 часов. Итоговая цена зависит от объёма работ,
-              сложности объекта, условий участка и продолжительности аренды.
+              Стоимость аренды мини-экскаватора с оператором начинается от 80 рублей
+              в час. При долгосрочной аренде цена может быть ниже. Итоговая стоимость
+              зависит от объёма работ, сложности объекта, срока аренды и условий участка.
             </p>
 
-            <ul class="mt-6 space-y-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base">
-              <li>• при долгосрочной аренде стоимость может быть ниже</li>
-              <li>• цена зависит от сложности и формата работ</li>
-              <li>• точную стоимость уточняем после обсуждения задачи</li>
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
+              <li>• минимальный выезд — от 4 часов</li>
+              <li>• при длительной аренде стоимость может быть ниже</li>
+              <li>• точную цену уточняем после обсуждения задачи</li>
             </ul>
 
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -173,53 +214,68 @@ const breadcrumbSchema = {
           </div>
         </div>
 
-        <div class="mt-8 rounded-[2rem] border border-slate-200 bg-white px-6 py-5 text-sm leading-7 text-[var(--text-muted)] sm:text-base">
+        <div class="mt-8 rounded-[1.75rem] border border-slate-200 bg-white px-6 py-5 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
           Точная стоимость рассчитывается индивидуально после уточнения задачи,
-          объёма работ, особенностей объекта и расстояния до места выполнения работ.
+          объёма работ, особенностей объекта, расстояния до места выполнения работ
+          и условий подъезда техники.
         </div>
       </div>
     </section>
 
-    <section class="bg-slate-50 py-16 sm:py-20">
-      <div class="mx-auto max-w-4xl px-6">
-        <h2 class="text-2xl font-bold text-[var(--text-main)] md:text-3xl">
-          От чего зависит цена
-        </h2>
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-6 py-16 sm:py-20">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Что влияет на стоимость
+          </p>
 
-        <div class="mt-8 grid gap-5 sm:grid-cols-2">
-          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6">
+          <h2 class="mt-4 text-2xl font-extrabold text-[var(--text-main)] md:text-4xl">
+            От чего зависит итоговая цена
+          </h2>
+
+          <p class="mt-4 text-base leading-8 text-[var(--text-muted)] sm:text-lg">
+            Мы не называем стоимость “на глаз”. Итоговый расчёт зависит от нескольких
+            факторов, которые важно учитывать заранее.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
             <h3 class="text-lg font-bold text-[var(--text-main)]">Сложность объекта</h3>
             <p class="mt-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
-              Учитывается тип грунта, условия подъезда техники, глубина работ и особенности участка.
+              Учитываются тип грунта, глубина работ, рельеф и особенности участка.
             </p>
           </div>
 
-          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6">
+          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
             <h3 class="text-lg font-bold text-[var(--text-main)]">Объём работ</h3>
             <p class="mt-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
-              Чем больше объём и длительность работ, тем точнее можно подобрать выгодный формат стоимости.
+              Чем больше объём и продолжительность работ, тем точнее можно подобрать выгодный формат стоимости.
             </p>
           </div>
 
-          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6">
+          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
             <h3 class="text-lg font-bold text-[var(--text-main)]">Срок аренды</h3>
             <p class="mt-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
               Для долгосрочной аренды мини-экскаватора возможны более выгодные условия.
             </p>
           </div>
 
-          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6">
-            <h3 class="text-lg font-bold text-[var(--text-main)]">Индивидуальный расчёт</h3>
+          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-bold text-[var(--text-main)]">Условия подъезда</h3>
             <p class="mt-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
-              Мы не даём “цену на глаз”, а уточняем задачу и предлагаем понятный ориентир под конкретный объект.
+              Важны возможность заезда техники, расстояние до объекта и общая логистика работ.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-white py-16 sm:py-20">
-      <div class="mx-auto max-w-4xl px-6">
+    <section class="bg-white">
+      <div class="mx-auto max-w-4xl px-6 py-16 sm:py-20">
         <h2 class="text-2xl font-bold text-[var(--text-main)] md:text-3xl">
           Частые вопросы по стоимости
         </h2>
@@ -227,68 +283,128 @@ const breadcrumbSchema = {
         <div class="mt-8 space-y-4">
           <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-bold text-[var(--text-main)] md:text-lg">
-              <span>Почему указана цена “от”?</span>
-              <span class="text-2xl leading-none text-[var(--color-accent)] transition duration-300 group-open:rotate-45">+</span>
+              <span>Почему на сайте указана цена “от”?</span>
+              <span class="text-2xl leading-none text-[var(--color-accent)] transition duration-300 group-open:rotate-45">
+                +
+              </span>
             </summary>
             <p class="mt-4 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
-              Потому что итоговая стоимость зависит от сложности объекта, объёма работ,
-              длительности аренды и условий выполнения задачи.
+              Итоговая стоимость зависит от сложности объекта, объёма работ, длины прокола,
+              длительности аренды техники и условий выполнения задачи.
             </p>
           </details>
 
           <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-bold text-[var(--text-main)] md:text-lg">
-              <span>Можно ли узнать точную цену заранее?</span>
-              <span class="text-2xl leading-none text-[var(--color-accent)] transition duration-300 group-open:rotate-45">+</span>
+              <span>Можно ли узнать точную стоимость заранее?</span>
+              <span class="text-2xl leading-none text-[var(--color-accent)] transition duration-300 group-open:rotate-45">
+                +
+              </span>
             </summary>
             <p class="mt-4 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
-              Да, после короткого обсуждения задачи мы можем дать ориентировочный расчёт
-              и уточнить стоимость под ваш объект.
+              Да, после короткого обсуждения задачи можно получить ориентировочный расчёт
+              под конкретный объект в Могилёве или области.
             </p>
           </details>
 
           <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-bold text-[var(--text-main)] md:text-lg">
               <span>Есть ли скидка на долгосрочную аренду?</span>
-              <span class="text-2xl leading-none text-[var(--color-accent)] transition duration-300 group-open:rotate-45">+</span>
+              <span class="text-2xl leading-none text-[var(--color-accent)] transition duration-300 group-open:rotate-45">
+                +
+              </span>
             </summary>
             <p class="mt-4 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
               Да, при долгосрочной аренде мини-экскаватора стоимость может быть ниже,
               чем при краткосрочном выезде.
             </p>
           </details>
+
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-bold text-[var(--text-main)] md:text-lg">
+              <span>Сколько стоит прокол под дорогой?</span>
+              <span class="text-2xl leading-none text-[var(--color-accent)] transition duration-300 group-open:rotate-45">
+                +
+              </span>
+            </summary>
+            <p class="mt-4 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
+              Ориентировочная стоимость начинается от 80 рублей за метр, но точная цена
+              зависит от длины прокола, типа грунта, диаметра трубы и условий объекта.
+            </p>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="bg-slate-50 py-16 sm:py-20">
-      <div class="mx-auto max-w-4xl px-6">
-        <h2 class="mb-6 text-2xl font-bold text-[var(--text-main)]">
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-4xl px-6 py-16 sm:py-20">
+        <h2 class="mb-6 text-2xl font-bold text-[var(--text-main)] md:text-3xl">
           Цены на прокол под дорогой и аренду техники в Могилёве
         </h2>
 
         <div class="space-y-6 text-base leading-8 text-slate-600 sm:text-lg">
           <p>
             Компания Dekolux выполняет прокол под дорогой методом ГНБ, земляные работы
-            и аренду мини-экскаватора в Могилёве и Могилёвской области. На сайте указаны
-            ориентировочные цены, которые помогают понять порядок стоимости услуг.
+            и аренду мини-экскаватора в Могилёве и Могилёвской области. На этой странице
+            указаны ориентировочные цены, которые помогают понять порядок стоимости услуг.
           </p>
 
           <p>
-            Прокол под дорогой стоит от 80 руб за метр, а аренда мини-экскаватора —
-            от 80 руб в час при минимальном выезде от 4 часов. Точная стоимость зависит
-            от сложности объекта, типа работ, условий участка и срока аренды.
+            Прокол под дорогой стоит от 80 рублей за метр, а аренда мини-экскаватора —
+            от 80 рублей в час при минимальном выезде от 4 часов. Цена может быть выше
+            или ниже в зависимости от сложности объекта, типа работ, условий участка и срока аренды.
           </p>
 
           <p>
             Чтобы получить точный расчёт, свяжитесь с нами через
             <a href="/contacts" class="text-orange-500 hover:underline">страницу контактов</a>
             или позвоните по телефону. Также вы можете посмотреть
-            <a href="/gnb-prokol" class="text-orange-500 hover:underline">услугу ГНБ</a>
+            <a href="/gnb-prokol" class="text-orange-500 hover:underline">услугу прокола под дорогой</a>
             и
             <a href="/arenda-mini-ekskavatora" class="text-orange-500 hover:underline">аренду мини-экскаватора</a>
             подробнее.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-16 sm:py-20">
+        <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8 md:p-10">
+          <div class="max-w-3xl">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.2em]"
+              style="color: var(--color-accent);"
+            >
+              Получить точный расчёт
+            </p>
+
+            <h2 class="mt-4 text-2xl font-extrabold text-[var(--text-main)] md:text-4xl">
+              Нужна точная стоимость под ваш объект?
+            </h2>
+
+            <p class="mt-4 text-base leading-8 text-[var(--text-muted)] sm:text-lg">
+              Оставьте заявку или позвоните. Мы уточним задачу, подскажем по стоимости
+              и предложим подходящий формат работ для вашего объекта.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <a
+                href="/contacts"
+                class="inline-flex items-center justify-center rounded-full px-6 py-4 text-center text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+                style="background-color: var(--color-accent);"
+              >
+                Оставить заявку
+              </a>
+
+              <a
+                href="tel:+375293326650"
+                class="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-4 text-center text-base font-semibold text-[var(--text-main)] transition hover:border-slate-400 hover:bg-white"
+              >
+                Позвонить
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
