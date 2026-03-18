@@ -9,7 +9,11 @@ const {
 } = Astro.props;
 
 const siteUrl = "https://dekolux.by";
-const canonical = new URL(Astro.url.pathname, siteUrl).toString();
+const pathname =
+  Astro.url.pathname === "/"
+    ? "/"
+    : Astro.url.pathname.replace(/\/+$/, "");
+const canonical = new URL(pathname, siteUrl).toString();
 const ogImage = new URL(image, siteUrl).toString();
 ---
 
