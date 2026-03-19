@@ -204,6 +204,10 @@ const faqSchema = {
             условий подъезда техники и сложности конкретного объекта.
           </p>
 
+          <p class="mt-4 text-base leading-8 text-[var(--text-muted)] sm:text-lg">
+            {item.priceNote}
+          </p>
+
           <ul class="mt-6 space-y-3 text-sm leading-7 text-[var(--text-muted)] sm:text-base sm:leading-8">
             <li>• стоимость может быть выше или ниже в зависимости от условий объекта</li>
             <li>• учитывается длина прокола и особенности участка</li>
@@ -300,9 +304,13 @@ const faqSchema = {
 
         <div class="space-y-6 text-base leading-8 text-slate-600 sm:text-lg">
           <p>
-            Компания Dekolux выполняет прокол под дорогой в {item.district}
+           Компания Dekolux выполняет прокол под дорогой в {item.district}
             методом горизонтально направленного бурения. Это надёжный способ
             проложить трубы и кабель под дорогой без вскрытия асфальта.
+          </p>
+
+          <p>
+             {item.intro}
           </p>
 
           <div id={`seo-more-${item.slug}`} class="hidden space-y-6 md:block">
