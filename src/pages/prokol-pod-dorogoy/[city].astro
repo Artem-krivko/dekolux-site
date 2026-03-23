@@ -15,9 +15,8 @@ export async function getStaticPaths() {
 
 const { item } = Astro.props;
 
-const title = `Прокол под дорогой в ${item.cityTitle} | ГНБ — Dekolux`;
-const description = `Прокол под дорогой в ${item.cityTitle} методом ГНБ. Прокладка труб и кабеля без вскрытия асфальта, земляные работы и мини-экскаватор. Dekolux.`;
-
+const title = `Прокол под дорогой в ${item.cityTitle} (ГНБ) — от 80 руб | Dekolux`;
+const description = `Прокол под дорогой в ${item.cityTitle} методом ГНБ. Без вскрытия асфальта. Прокладка труб и кабеля. Цена от 80 руб за метр.`;
 const canonical = `https://www.dekolux.by/prokol-pod-dorogoy/${item.slug}`;
 
 const breadcrumbSchema = {
