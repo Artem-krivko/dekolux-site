@@ -598,8 +598,5 @@ const breadcrumbSchema = {
 </section>
 
   <Footer />
-    <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-    </script>
-
+   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 </MainLayout>
