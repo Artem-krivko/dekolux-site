@@ -1,0 +1,518 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "Бурение скважин на воду в Могилёве — цены и выезд | Dekolux";
+const description =
+  "Бурение скважин на воду в Могилёве и Могилёвской области. Водоснабжение частных домов и объектов. Собственная техника, выезд по области. Звоните.";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какая глубина скважины на воду в Могилёвской области?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Глубина скважины зависит от геологии участка. В Могилёвской области водоносный горизонт обычно находится на глубине от 20 до 80 метров. Точная глубина определяется после геологической оценки."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько стоит бурение скважины на воду?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Стоимость бурения скважины — от 70 руб за метр. Итоговая цена зависит от глубины и типа грунта."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как долго служит скважина на воду?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "При правильном обустройстве и обслуживании скважина служит 20–50 лет. Срок зависит от типа скважины, материала обсадных труб и условий эксплуатации."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://www.dekolux.by/"
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Бурение скважин на воду",
+      item: "https://www.dekolux.by/burenie-skvazhin"
+    }
+  ]
+};
+---
+
+<MainLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <Header />
+
+  <nav class="mx-auto max-w-7xl px-6 pt-6 text-sm text-slate-500">
+    <a href="/" class="hover:text-slate-700">Главная</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-700">Бурение скважин на воду</span>
+  </nav>
+
+  <main>
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0f1b30] via-[#12223c] to-[#0c1628] text-[var(--text-light)]">
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
+        <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-cyan-400/5 blur-3xl"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-4xl">
+          <div
+            class="mb-6 inline-flex rounded-full border px-4 py-2 text-sm font-medium"
+            style="
+              border-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+              background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+              color: #fed7aa;
+            "
+          >
+            Услуга №5 • Могилёв и Могилёвская область
+          </div>
+        </div>
+        <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
+          Бурение скважин на воду
+          <span style="color: var(--color-accent);">в Могилёве</span>
+        </h1>
+
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-[var(--text-light)]/80">
+          Бурение скважин для водоснабжения частных домов и объектов в Могилёве и области.
+          Собственная техника, выезд по всей Могилёвской области.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="/contacts"
+            class="rounded-full px-6 py-4 text-center text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+            style="background-color: var(--color-accent);"
+          >
+            Получить расчёт
+          </a>
+
+          <a
+            href="tel:+375293326650"
+            class="rounded-full border border-white/15 bg-white/5 px-6 py-4 text-center text-base font-semibold text-[var(--text-light)] backdrop-blur transition duration-300 hover:border-white/30 hover:bg-white/10"
+          >
+            Уточнить стоимость
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">от 70 руб</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">стоимость за метр бурения</p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">20–80 м</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">типичная глубина скважин в области</p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">20–50 лет</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">срок службы скважины</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-2 md:py-28">
+        <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Описание услуги
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Для каких объектов подходит бурение скважин
+          </h2>
+          <p class="mt-6 max-w-3xl text-base leading-8 text-[var(--text-muted)]">
+            Скважина на воду — надёжный источник водоснабжения для частного дома,
+            дачи или строительного объекта. Не зависит от центрального водопровода
+            и обеспечивает стабильную подачу воды круглый год.
+          </p>
+          <p class="mt-4 max-w-3xl text-base leading-8 text-[var(--text-muted)]">
+            Мы бурим скважины на воду в Могилёве и Могилёвской области,
+            используя собственную буровую технику и опыт работы в местных грунтах.
+          </p>
+        </div>
+
+        <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-[var(--text-main)]">Что входит в услугу</h3>
+
+          <div class="mt-6 space-y-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Бурение скважины на необходимую глубину
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Монтаж обсадных труб
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Прокачка и первичная очистка скважины
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Консультация по обустройству водоснабжения
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Преимущества
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Почему заказывают бурение скважин у Dekolux
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Опыт работы в Могилёвской области, собственная буровая техника и аккуратный
+            подход к каждому объекту.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Своя техника</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Работаем без посредников — быстрее и выгоднее для заказчика.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Знание грунтов</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Опыт бурения в Могилёвской области и понимание местной геологии.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Быстрый выезд</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Оперативно выезжаем по Могилёву и всей области.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Долговечный результат</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Качественные материалы и технологии для скважины на десятилетия.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Этапы работы
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Как заказать бурение скважины
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            От первой консультации до готовой скважины — понятно и по шагам.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">01</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Заявка</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Звоните или оставляете заявку на сайте.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">02</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Консультация</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Обсуждаем объект, уточняем глубину и стоимость.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">03</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Выезд техники</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Приезжаем на объект в согласованное время.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">04</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Готовая скважина</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Бурим, монтируем трубы и прокачиваем скважину.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-[var(--text-light)]" style="background-color: var(--color-brand);">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-900 p-8 md:p-12">
+          <div
+            class="pointer-events-none absolute inset-0 opacity-70"
+            style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 40%);"
+          ></div>
+
+          <div class="relative max-w-3xl">
+            <h2 class="text-3xl font-extrabold md:text-4xl">
+              Нужна скважина на воду в Могилёве или области?
+            </h2>
+            <p class="mt-4 max-w-2xl text-base leading-8 text-[var(--text-light)]/80">
+              Позвоните или оставьте заявку — рассчитаем стоимость и уточним сроки выезда.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/contacts"
+                class="rounded-full px-6 py-4 text-center text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+                style="background-color: var(--color-accent);"
+              >
+                Получить расчёт
+              </a>
+
+              <a
+                href="tel:+375293326650"
+                class="rounded-full border border-slate-700 px-6 py-4 text-center text-base font-semibold text-[var(--text-light)] transition duration-300 hover:border-slate-500 hover:bg-slate-800"
+              >
+                Позвонить
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-4xl px-6 py-20">
+      <h2 class="text-2xl font-bold text-[var(--text-main)] md:text-3xl">
+        Частые вопросы по бурению скважин
+      </h2>
+
+      <div class="mt-8 space-y-4">
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+            <span>Какая глубина скважины на воду в Могилёвской области?</span>
+            <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+            В Могилёвской области водоносный горизонт обычно находится на глубине от 20 до 80 метров.
+            Точная глубина определяется после консультации и оценки участка.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+            <span>Сколько стоит бурение скважины на воду?</span>
+            <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+            Стоимость бурения — от 70 руб за метр. Итоговая цена зависит от глубины скважины
+            и типа грунта на вашем участке.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+            <span>Как долго служит скважина на воду?</span>
+            <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+            При правильном обустройстве и обслуживании скважина служит 20–50 лет.
+            Срок зависит от типа скважины, материала обсадных труб и условий эксплуатации.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-20">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="mb-6 text-2xl font-bold text-[var(--text-main)]">
+        Бурение скважин на воду в Могилёве
+      </h2>
+
+      <div class="space-y-6 text-lg leading-8 text-slate-600">
+        <p>
+          Скважина на воду — это надёжный и долговечный источник водоснабжения
+          для частного дома, дачи или строительного объекта. Не зависит от
+          централизованных сетей и работает круглый год.
+        </p>
+
+        <div id="seo-more-drilling" class="hidden space-y-6 md:block">
+          <p>
+            Компания Dekolux выполняет бурение скважин на воду в Могилёве и
+            Могилёвской области. Работаем на собственной буровой технике, знаем
+            местные грунты и подбираем оптимальное решение для каждого участка.
+          </p>
+
+          <p>
+            Бурение скважин часто выполняется в комплексе с другими услугами:
+            <a href="/arenda-mini-ekskavatora" class="text-orange-500 hover:underline">
+              аренда мини-экскаватора
+            </a>
+            для земляных работ на участке, или
+            <a href="/kanalizaciya-septiki" class="text-orange-500 hover:underline">
+              монтаж канализации и септиков
+            </a>
+            для обустройства полной инженерной системы.
+          </p>
+
+          <p>
+            Также мы предоставляем
+            <a href="/burovaya-mashina" class="text-orange-500 hover:underline">
+              аренду буровой машины
+            </a>
+            и выполняем
+            <a href="/gnb-prokol" class="text-orange-500 hover:underline">
+              прокол под дорогой методом ГНБ
+            </a>.
+          </p>
+        </div>
+      </div>
+
+      <button
+        id="seo-toggle-drilling"
+        type="button"
+        class="mt-6 inline-flex rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-[var(--text-main)] transition hover:border-slate-400 hover:bg-white md:hidden"
+      >
+        Читать дальше
+      </button>
+    </div>
+  </section>
+
+  <section class="bg-slate-50">
+    <div class="mx-auto max-w-5xl px-6 py-16 md:py-20">
+      <div class="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8 md:p-10">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em]" style="color: var(--color-accent);">
+          Полезная информация
+        </p>
+
+        <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-4xl">
+          Бурение скважин на воду в Могилёве и области
+        </h2>
+
+        <p class="mt-5 text-base leading-8 text-[var(--text-muted)] md:text-lg">
+          Скважина на воду — это инвестиция в независимое водоснабжение на десятилетия.
+          Она обеспечивает стабильную подачу воды без зависимости от коммунальных сетей
+          и перебоев давления.
+        </p>
+
+        <h3 class="mt-8 text-2xl font-bold text-[var(--text-main)]">
+          Когда стоит пробурить скважину
+        </h3>
+
+        <ul class="mt-4 space-y-3 text-base leading-8 text-[var(--text-muted)] md:text-lg">
+          <li>• нет подключения к центральному водопроводу</li>
+          <li>• слабое давление в водопроводе</li>
+          <li>• строительство нового дома на участке</li>
+          <li>• необходимость автономного водоснабжения</li>
+        </ul>
+
+        <h3 class="mt-8 text-2xl font-bold text-[var(--text-main)]">
+          Преимущества скважины на воду
+        </h3>
+
+        <ul class="mt-4 space-y-3 text-base leading-8 text-[var(--text-muted)] md:text-lg">
+          <li>• независимость от центральных водопроводных сетей</li>
+          <li>• стабильная подача воды круглый год</li>
+          <li>• экономия на коммунальных платежах</li>
+          <li>• срок службы 20–50 лет при правильном уходе</li>
+        </ul>
+
+        <p class="mt-5 text-base leading-8 text-[var(--text-muted)] md:text-lg">
+          Также вы можете заказать
+          <a href="/burovaya-mashina" class="text-orange-500 hover:underline">
+            аренду буровой машины
+          </a>,
+          <a href="/arenda-kolesnogo-ekskavatora" class="text-orange-500 hover:underline">
+            аренду колесного экскаватора
+          </a>
+          или
+          <a href="/kanalizaciya-septiki" class="text-orange-500 hover:underline">
+            монтаж наружной канализации и септиков
+          </a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="mx-auto max-w-5xl px-6">
+      <h2 class="text-center text-2xl font-bold text-[var(--text-main)] md:text-3xl">
+        Работаем по городам Могилёвской области
+      </h2>
+
+      <p class="mx-auto mt-4 max-w-2xl text-center text-slate-600">
+        Бурение скважин, земляные работы и прокол под дорогой в городах и районах области.
+      </p>
+
+      <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+        <a href="/prokol-pod-dorogoy/bobruysk" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Бобруйск</a>
+        <a href="/prokol-pod-dorogoy/osipovichi" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Осиповичи</a>
+        <a href="/prokol-pod-dorogoy/shklov" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Шклов</a>
+        <a href="/prokol-pod-dorogoy/chausy" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Чаусы</a>
+        <a href="/prokol-pod-dorogoy/gorki" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Горки</a>
+        <a href="/prokol-pod-dorogoy/krugloe" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Круглое</a>
+        <a href="/prokol-pod-dorogoy/klimovichi" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Климовичи</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <script is:inline>
+    const seoToggleDrilling = document.getElementById("seo-toggle-drilling");
+    const seoMoreDrilling = document.getElementById("seo-more-drilling");
+
+    if (seoToggleDrilling && seoMoreDrilling) {
+      seoToggleDrilling.addEventListener("click", () => {
+        const isHidden = seoMoreDrilling.classList.contains("hidden");
+        seoMoreDrilling.classList.toggle("hidden");
+        seoToggleDrilling.textContent = isHidden ? "Свернуть" : "Читать дальше";
+      });
+    }
+  </script>
+</MainLayout>

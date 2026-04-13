@@ -1,0 +1,521 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "Аренда буровой машины в Могилёве — выезд по области | Dekolux";
+const description =
+  "Аренда буровой машины в Могилёве и Могилёвской области. Буровые работы любой сложности. Собственная техника, опытный оператор. Стоимость — договорная.";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Для каких работ используется буровая машина?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Буровая машина используется для бурения скважин на воду, устройства свай, бурения под столбы и опоры, а также для геологических и инженерных работ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько стоит аренда буровой машины?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Стоимость аренды буровой машины — договорная, зависит от типа и объёма работ, условий объекта и удалённости от Могилёва. Уточняйте при звонке."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Выезжает ли буровая машина в область?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, мы выезжаем по всей Могилёвской области. Стоимость выезда зависит от расстояния до объекта."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Главная",
+      item: "https://www.dekolux.by/"
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Буровая машина",
+      item: "https://www.dekolux.by/burovaya-mashina"
+    }
+  ]
+};
+---
+
+<MainLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <Header />
+
+  <nav class="mx-auto max-w-7xl px-6 pt-6 text-sm text-slate-500">
+    <a href="/" class="hover:text-slate-700">Главная</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-700">Буровая машина</span>
+  </nav>
+
+  <main>
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0f1b30] via-[#12223c] to-[#0c1628] text-[var(--text-light)]">
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
+        <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-cyan-400/5 blur-3xl"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-4xl">
+          <div
+            class="mb-6 inline-flex rounded-full border px-4 py-2 text-sm font-medium"
+            style="
+              border-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+              background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+              color: #fed7aa;
+            "
+          >
+            Услуга №6 • Могилёв и Могилёвская область
+          </div>
+        </div>
+        <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
+          Аренда буровой машины
+          <span style="color: var(--color-accent);">в Могилёве</span>
+        </h1>
+
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-[var(--text-light)]/80">
+          Буровые работы любой сложности на объектах в Могилёве и Могилёвской области.
+          Собственная техника, опытный оператор, стоимость — договорная.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="/contacts"
+            class="rounded-full px-6 py-4 text-center text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+            style="background-color: var(--color-accent);"
+          >
+            Получить расчёт
+          </a>
+
+          <a
+            href="tel:+375293326650"
+            class="rounded-full border border-white/15 bg-white/5 px-6 py-4 text-center text-base font-semibold text-[var(--text-light)] backdrop-blur transition duration-300 hover:border-white/30 hover:bg-white/10"
+          >
+            Уточнить стоимость
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">Договорная</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">стоимость зависит от объёма и условий</p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">Любая сложность</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">буровые работы на объектах разного типа</p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-2xl font-extrabold text-[var(--text-main)]">Вся область</div>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">выезд по Могилёву и Могилёвской области</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-2 md:py-28">
+        <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Описание услуги
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Для каких работ нужна буровая машина
+          </h2>
+          <p class="mt-6 max-w-3xl text-base leading-8 text-[var(--text-muted)]">
+            Буровая машина применяется там, где требуется точное и глубокое бурение:
+            скважины на воду, устройство свайных оснований, бурение под опоры и столбы,
+            инженерные и геологические работы.
+          </p>
+          <p class="mt-4 max-w-3xl text-base leading-8 text-[var(--text-muted)]">
+            Мы предоставляем буровую машину с опытным оператором — работаем аккуратно
+            и точно, с учётом условий вашего объекта.
+          </p>
+        </div>
+
+        <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-[var(--text-main)]">Что можно выполнить</h3>
+
+          <div class="mt-6 space-y-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Бурение скважин на воду
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Устройство буронабивных свай и опор
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Бурение под столбы ограждений и линий электропередач
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              Инженерные и геологические буровые работы
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Преимущества
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Почему выбирают буровую машину Dekolux
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Собственная техника, опытный оператор и гибкий подход к задачам любой сложности.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Своя техника</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Работаем без посредников — быстрее реагируем и гибче по цене.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Опытный оператор</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Профессиональное выполнение буровых работ на объектах любой сложности.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Выезд по области</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Работаем в Могилёве и выезжаем по всей Могилёвской области.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <h3 class="text-xl font-bold text-[var(--text-main)]">Гибкие условия</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--text-muted)]">
+              Стоимость рассчитывается индивидуально под задачу и объём работ.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em]"
+            style="color: var(--color-accent);"
+          >
+            Этапы работы
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-5xl">
+            Как заказать буровую машину
+          </h2>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-[var(--text-muted)] md:text-lg">
+            Простой процесс от звонка до начала буровых работ на вашем объекте.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">01</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Заявка</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Звоните или оставляете заявку на сайте.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">02</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Уточнение задачи</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Обсуждаем тип работ, объект и рассчитываем стоимость.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">03</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Выезд техники</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Приезжаем с буровой машиной в согласованное время.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="text-sm font-semibold" style="color: var(--color-accent);">04</div>
+            <h3 class="mt-3 text-lg font-bold text-[var(--text-main)]">Выполнение работ</h3>
+            <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">
+              Выполняем буровые работы точно и в срок.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-[var(--text-light)]" style="background-color: var(--color-brand);">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
+        <div class="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-900 p-8 md:p-12">
+          <div
+            class="pointer-events-none absolute inset-0 opacity-70"
+            style="background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 40%);"
+          ></div>
+
+          <div class="relative max-w-3xl">
+            <h2 class="text-3xl font-extrabold md:text-4xl">
+              Нужна буровая машина в Могилёве или области?
+            </h2>
+            <p class="mt-4 max-w-2xl text-base leading-8 text-[var(--text-light)]/80">
+              Позвоните или оставьте заявку — рассчитаем стоимость под вашу задачу.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/contacts"
+                class="rounded-full px-6 py-4 text-center text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02]"
+                style="background-color: var(--color-accent);"
+              >
+                Получить расчёт
+              </a>
+
+              <a
+                href="tel:+375293326650"
+                class="rounded-full border border-slate-700 px-6 py-4 text-center text-base font-semibold text-[var(--text-light)] transition duration-300 hover:border-slate-500 hover:bg-slate-800"
+              >
+                Позвонить
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-4xl px-6 py-20">
+      <h2 class="text-2xl font-bold text-[var(--text-main)] md:text-3xl">
+        Частые вопросы по аренде буровой машины
+      </h2>
+
+      <div class="mt-8 space-y-4">
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+            <span>Для каких работ используется буровая машина?</span>
+            <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+            Буровая машина используется для бурения скважин на воду, устройства свайных
+            оснований, бурения под опоры столбов и ограждений, а также для инженерных
+            и геологических работ.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+            <span>Сколько стоит аренда буровой машины?</span>
+            <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+            Стоимость аренды договорная — зависит от типа и объёма работ, условий объекта
+            и удалённости от Могилёва. Уточняйте при звонке.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-[var(--text-main)]">
+            <span>Выезжает ли буровая машина в область?</span>
+            <span class="text-2xl text-[var(--color-accent)] transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 text-base leading-8 text-[var(--text-muted)]">
+            Да, выезжаем по всей Могилёвской области. Стоимость выезда зависит от
+            расстояния до объекта и уточняется при звонке.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-20">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="mb-6 text-2xl font-bold text-[var(--text-main)]">
+        Аренда буровой машины в Могилёве
+      </h2>
+
+      <div class="space-y-6 text-lg leading-8 text-slate-600">
+        <p>
+          Буровая машина — это специализированная техника для выполнения точных буровых
+          работ на объектах любого типа. Применяется для бурения скважин, устройства
+          свай, столбов и других инженерных конструкций.
+        </p>
+
+        <div id="seo-more-drill-machine" class="hidden space-y-6 md:block">
+          <p>
+            Компания Dekolux предоставляет буровую машину с оператором в Могилёве
+            и Могилёвской области. Стоимость определяется индивидуально под каждый
+            проект — звоните, чтобы получить расчёт.
+          </p>
+
+          <p>
+            Буровая машина часто используется в комплексе с другими услугами:
+            <a href="/burenie-skvazhin" class="text-orange-500 hover:underline">
+              бурение скважин на воду
+            </a>
+            для обустройства водоснабжения, или
+            <a href="/arenda-kolesnogo-ekskavatora" class="text-orange-500 hover:underline">
+              аренда колесного экскаватора
+            </a>
+            для сопутствующих земляных работ.
+          </p>
+
+          <p>
+            Также мы выполняем
+            <a href="/gnb-prokol" class="text-orange-500 hover:underline">
+              прокол под дорогой методом ГНБ
+            </a>,
+            <a href="/arenda-mini-ekskavatora" class="text-orange-500 hover:underline">
+              аренду мини-экскаватора
+            </a>
+            и
+            <a href="/kanalizaciya-septiki" class="text-orange-500 hover:underline">
+              монтаж наружной канализации и септиков
+            </a>.
+          </p>
+        </div>
+      </div>
+
+      <button
+        id="seo-toggle-drill-machine"
+        type="button"
+        class="mt-6 inline-flex rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-[var(--text-main)] transition hover:border-slate-400 hover:bg-white md:hidden"
+      >
+        Читать дальше
+      </button>
+    </div>
+  </section>
+
+  <section class="bg-slate-50">
+    <div class="mx-auto max-w-5xl px-6 py-16 md:py-20">
+      <div class="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8 md:p-10">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em]" style="color: var(--color-accent);">
+          Полезная информация
+        </p>
+
+        <h2 class="mt-4 text-3xl font-extrabold text-[var(--text-main)] md:text-4xl">
+          Аренда буровой машины в Могилёве и области
+        </h2>
+
+        <p class="mt-5 text-base leading-8 text-[var(--text-muted)] md:text-lg">
+          Буровая машина позволяет выполнять точные и глубокие буровые работы там,
+          где другая техника не справляется. Применяется как на частных участках,
+          так и на крупных строительных объектах.
+        </p>
+
+        <h3 class="mt-8 text-2xl font-bold text-[var(--text-main)]">
+          Когда нужна буровая машина
+        </h3>
+
+        <ul class="mt-4 space-y-3 text-base leading-8 text-[var(--text-muted)] md:text-lg">
+          <li>• бурение скважин на воду на участке</li>
+          <li>• устройство буронабивных свай под фундамент</li>
+          <li>• бурение под опоры столбов, заборов, ЛЭП</li>
+          <li>• геологические и инженерные изыскания</li>
+        </ul>
+
+        <h3 class="mt-8 text-2xl font-bold text-[var(--text-main)]">
+          Преимущества аренды у Dekolux
+        </h3>
+
+        <ul class="mt-4 space-y-3 text-base leading-8 text-[var(--text-muted)] md:text-lg">
+          <li>• собственная техника без посредников</li>
+          <li>• опытный оператор с знанием местных условий</li>
+          <li>• выезд по Могилёву и всей области</li>
+          <li>• индивидуальный расчёт стоимости</li>
+        </ul>
+
+        <p class="mt-5 text-base leading-8 text-[var(--text-muted)] md:text-lg">
+          Также вы можете заказать
+          <a href="/burenie-skvazhin" class="text-orange-500 hover:underline">
+            бурение скважин на воду
+          </a>,
+          <a href="/arenda-kolesnogo-ekskavatora" class="text-orange-500 hover:underline">
+            аренду колесного экскаватора
+          </a>
+          или
+          <a href="/arenda-mini-ekskavatora" class="text-orange-500 hover:underline">
+            аренду мини-экскаватора
+          </a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="mx-auto max-w-5xl px-6">
+      <h2 class="text-center text-2xl font-bold text-[var(--text-main)] md:text-3xl">
+        Работаем по городам Могилёвской области
+      </h2>
+
+      <p class="mx-auto mt-4 max-w-2xl text-center text-slate-600">
+        Буровые работы, бурение скважин и земляные работы в городах и районах области.
+      </p>
+
+      <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+        <a href="/prokol-pod-dorogoy/bobruysk" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Бобруйск</a>
+        <a href="/prokol-pod-dorogoy/osipovichi" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Осиповичи</a>
+        <a href="/prokol-pod-dorogoy/shklov" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Шклов</a>
+        <a href="/prokol-pod-dorogoy/chausy" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Чаусы</a>
+        <a href="/prokol-pod-dorogoy/gorki" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Горки</a>
+        <a href="/prokol-pod-dorogoy/krugloe" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Круглое</a>
+        <a href="/prokol-pod-dorogoy/klimovichi" class="rounded-xl border border-slate-200 p-4 text-center font-semibold text-[var(--text-main)] transition hover:border-orange-400 hover:text-orange-500">Климовичи</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <script is:inline>
+    const seoToggleDrillMachine = document.getElementById("seo-toggle-drill-machine");
+    const seoMoreDrillMachine = document.getElementById("seo-more-drill-machine");
+
+    if (seoToggleDrillMachine && seoMoreDrillMachine) {
+      seoToggleDrillMachine.addEventListener("click", () => {
+        const isHidden = seoMoreDrillMachine.classList.contains("hidden");
+        seoMoreDrillMachine.classList.toggle("hidden");
+        seoToggleDrillMachine.textContent = isHidden ? "Свернуть" : "Читать дальше";
+      });
+    }
+  </script>
+</MainLayout>
